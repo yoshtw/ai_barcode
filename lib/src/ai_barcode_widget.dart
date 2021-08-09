@@ -4,7 +4,6 @@ import 'package:ai_barcode_platform_interface/ai_barcode_platform_interface.dart
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:universal_platform/universal_platform.dart';
-import 'package:ai_barcode_web/ai_barcode_web.dart';
 
 ///
 /// PlatformScannerWidget
@@ -74,13 +73,7 @@ class _PlatformScannerWidgetState
 
   @override
   Widget build(BuildContext context) {
-    if (!kIsWeb) {
-      if (UniversalPlatform.isAndroid || UniversalPlatform.isIOS) {
-        AiBarcodeScannerPlatform.instance = AiBarcodeMobileScannerPlugin();
-      } else {
-        AiBarcodeScannerPlatform.instance = AiBarcodeScannerWebPlugin();
-      }
-    }
+    AiBarcodeScannerPlatform.instance = AiBarcodeMobileScannerPlugin();
     //Create
     AiBarcodeScannerPlatform.instance.addListener(_widgetCreatedListener);
     AiBarcodeScannerPlatform.instance.addResultCallback(_webResultCallback);
