@@ -4,6 +4,7 @@ import 'package:ai_barcode_platform_interface/ai_barcode_platform_interface.dart
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:universal_platform/universal_platform.dart';
+import 'package:ai_barcode_web/ai_barcode_web.dart';
 
 ///
 /// PlatformScannerWidget
