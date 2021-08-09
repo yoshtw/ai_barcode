@@ -76,6 +76,8 @@ class _PlatformScannerWidgetState
     if (!kIsWeb) {
       if (UniversalPlatform.isAndroid || UniversalPlatform.isIOS) {
         AiBarcodeScannerPlatform.instance = AiBarcodeMobileScannerPlugin();
+      } else {
+        AiBarcodeScannerPlatform.instance = AiBarcodeScannerWebPlugin();
       }
     }
     //Create
