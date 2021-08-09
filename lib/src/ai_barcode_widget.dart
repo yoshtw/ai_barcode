@@ -86,6 +86,7 @@ class _PlatformScannerWidgetState
     AiBarcodeScannerPlatform.instance.addResultCallback(_webResultCallback);
     AiBarcodeScannerPlatform.instance.unsupportedPlatformDescription =
         widget._unsupportedDescription;
+    
     return AiBarcodeScannerPlatform.instance.buildScannerView(context);
   }
 }
